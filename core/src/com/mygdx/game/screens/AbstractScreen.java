@@ -66,6 +66,7 @@ public abstract class AbstractScreen implements Screen {
 	// dispose - to co sie dzieje po zamknieciu aplikacji
 	public void dispose(){
 		game.dispose();
+		sprite_batch.dispose();
 	}
 	
 	@Override
