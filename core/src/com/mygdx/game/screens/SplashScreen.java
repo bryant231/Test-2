@@ -4,6 +4,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.utils.Timer;
+import com.badlogic.gdx.utils.Timer.Task;
 import com.mygdx.game.Gra_testowa;
 
 public class SplashScreen extends AbstractScreen {
@@ -14,10 +16,15 @@ public class SplashScreen extends AbstractScreen {
 	
 	
 	
-	public SplashScreen(Gra_testowa game){
+	public SplashScreen(final Gra_testowa game){
 		super(game);
 		init();
-		
+		Timer.schedule(new Task(){
+			public void run(){
+				System.out.println("3 sekunda");
+				game.setScreen(new GameplayScreen(game));
+			}
+		},3);
 	}
 
 
