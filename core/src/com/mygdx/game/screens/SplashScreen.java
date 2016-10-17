@@ -28,7 +28,7 @@ public class SplashScreen extends AbstractScreen {
 	}
 
 
-	private void init() {
+	protected void init() {
 		//TO DO better assets loading when game loads
 		splashImg = new Texture(Gdx.files.internal("f1.jpg"));
 		font = new BitmapFont();
